@@ -1,0 +1,12 @@
+# Ignore Terraform generated folders and files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# Optional system files
+*.log
+*.bak
+*.swp
+

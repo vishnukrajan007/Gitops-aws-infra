@@ -23,7 +23,7 @@ terraform apply -var-file=../dev.tfvars -var-file=vpc.tfvars
 cd ../eks
 terraform init -backend-config=../state.config
 terraform apply -var-file=../dev.tfvars -var-file=eks.tfvars
-aws eks update-kubeconfig --name dev-main --region us-east-1
+aws eks update-kubeconfig --name dev-main --region ap-south-1
 kubectl get pods -A
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 kubectl port-forward svc/argocd-server 8080:80 -n argocd
